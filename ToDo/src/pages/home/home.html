@@ -1,15 +1,15 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      ToDo-List
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <ion-list no-lines>
-    <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
-      {{ item }}
-    </button> 
+  <ion-list>
+    <button ion-item *ngFor="let task of tasks" (click)="itemSelected(task)">
+      {{ task.title }}
+    </button>  
   </ion-list>
 </ion-content>
