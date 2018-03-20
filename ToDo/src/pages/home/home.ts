@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { TasksService } from "../../services/tasks.services";
+import { DetailPage } from '../detail/detail';
 
 @Component({
   selector: 'page-home',
@@ -8,8 +9,14 @@ import { TasksService } from "../../services/tasks.services";
 })
 export class HomePage {
  tasks=[];
+ @ViewChild('myNav') nav: NavController
   constructor(public navCtrl: NavController, public tasksService : TasksService) {
     this.tasks=tasksService.getTasks();
   }
+
+  public goToDetail() {
+    // Let's navigate from TabsPage to Page1
+    this.navCtrl.push(DetailPage);
+ }
 
 }

@@ -7,11 +7,13 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { TasksService } from "../services/tasks.services";
+import { DetailPage } from '../pages/detail/detail';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    DetailPage
   ],
   imports: [
     BrowserModule,
@@ -20,7 +22,8 @@ import { TasksService } from "../services/tasks.services";
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    DetailPage
   ],
   providers: [
     StatusBar,
