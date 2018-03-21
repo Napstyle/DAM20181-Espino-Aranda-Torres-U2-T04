@@ -15,6 +15,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class DetailPage {
 
+  task={id:null,title:null,description:null};
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 

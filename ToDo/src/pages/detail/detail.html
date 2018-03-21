@@ -14,5 +14,20 @@
 
 
 <ion-content padding>
+    <ion-list>
+
+        <ion-item>
+          <ion-label floating>Tarea</ion-label>
+          <ion-input type="text" [(ngModel)]="task.title"></ion-input>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label floating>Descripcion</ion-label>
+          <ion-textarea [(ngModel)]="task.description"></ion-textarea>
+        </ion-item>
+      
+      </ion-list>
+
+      <button ion-button block color="secondary">Save</button>
 
 </ion-content>
